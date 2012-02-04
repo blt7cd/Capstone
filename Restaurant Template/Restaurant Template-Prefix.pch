@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Restaurant Template' target in the 'Restaurant Template' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
