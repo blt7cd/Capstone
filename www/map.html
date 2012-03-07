@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta charset="utf-8">
+            
+            
+            <!-- iPad/iPhone specific css below, add after your main css >
+             <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+             <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+             -->
+            <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+            <!-- <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script> -->
+            <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.0.1.css" />
+            <script src="jquery/jquery-1.7.1.js"></script> 
+            <!-- <script type="text/javascript" src="main.js"></script> -->
+            <script src="jquery/jquery.mobile-1.0.1.js"></script>
+			<script type="text/javascript">
+               function loader() {
+                    var state = document.readyState;
+                    if (state == 'loaded' || state == 'complete') {
+                         run();
+                    } else {
+                         if (navigator.userAgent.indexOf('Browzr') > -1) {
+                              setTimeout(run, 250);
+                         } else {
+                              document.addEventListener('deviceready',run,false);
+                         }
+                    }
+               }
+               function run() {
+                    var win = function(position) {                          // Grab coordinates object from the Position object passed into success callback.
+                         var coords = position.coords;
+                         // Call for static google maps data - make sure you use your own Google Maps API key!
+                         var url = "http://maps.google.com/maps/api/staticmap?center=" + coords.latitude + "," + coords.longitude + "&zoom=13&size=320x480&maptype=roadmap&key=AIzaSyCjmc-GzKlCtVj7jyWnSxoh2mgTuInr_8o&sensor=true";
+                         document.getElementById('map').setAttribute('src',url);
+                    };
+                    var fail = function(e) {
+                         alert('Can\'t retrieve position.\nError: ' + e);
+                    };
+                    navigator.geolocation.getCurrentPosition(win, fail);
+               } 
+          </script>
+            </head>
+    <body onload="loader();">
+        <div data-role="page" class="type-interior">
+            <p>Map/Contact info shit goes here. We'll do some GPS coordinates sweet shit and give them directions. Phone number??-->Just tap it.</p>
+            <img id="map" />
+            <div data-role="footer" data-id="foo1" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" data-transition="slideup" data-icon="home">Home</a></li>
+                        <li><a href="menu.html" data-transition="slideup">Menu</a></li>
+                        <li><a href="map.html" data-transition="slideup">Map</a></li>
+                        <li><a href="coupons.html" data-transition="slideup">Coupons</a></li>
+                    </ul>
+                </div> <!--/navbar -->
+            </div> <!--/footer -->
+        </div> <!--page -->
+    </body>
+</html>
