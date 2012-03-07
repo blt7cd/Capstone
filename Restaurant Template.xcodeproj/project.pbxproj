@@ -72,7 +72,6 @@
 		D399B02E14DD9FC200492DD1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		D399B02F14DD9FC200492DD1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		D399B03114DD9FC200492DD1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
-		D399B03414DD9FC200492DD1 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		D399B03A14DDA01F00492DD1 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,7 +231,6 @@
 		D399B03314DD9FC200492DD1 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				D399B03414DD9FC200492DD1 /* README */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
@@ -490,6 +488,7 @@
 				D399B03914DD9FC200492DD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
